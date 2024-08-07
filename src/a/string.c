@@ -1,7 +1,7 @@
 /*
  * string.c
  *
- *  Created on: 2016��12��21��
+ *  Created on: 2016锟斤拷12锟斤拷21锟斤拷
  *      Author: Asteria
  */
 
@@ -9,14 +9,14 @@
 #include <string.h>
 
 void test_strlen() {
-	char name[40]="a要";
+	char name[40]="a瑕�";
 	printf("%s,%d,%d\n",name,sizeof name,strlen(name));
 
-	char* desc="a要";
+	char* desc="a瑕�";
 	printf("%s\n",desc);
 //	printf("%d,%d",sizeof desc,strlen(*desc));//strlen(*desc) won't work
 
-	char* ca = "a要";
+	char* ca = "a瑕�";
 	char* copy;
 	copy = ca;
 	printf("%s\n", copy);
@@ -32,9 +32,9 @@ void char_length(){
 }
 
 void string_len(){
-	char a[]="a要";
+	char a[]="a瑕�";
 	printf("%d\n",strlen(a));
-	char b = '要';
+	char b = '瑕�';
 
 	printf("%c\n",b);
 	b= 'a';

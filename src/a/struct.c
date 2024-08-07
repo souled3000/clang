@@ -1,7 +1,7 @@
 /*
  * struct.c
  *
- *  Created on: 2016Äê12ÔÂ24ÈÕ
+ *  Created on: 2016é”Ÿæ–¤æ‹·12é”Ÿæ–¤æ‹·24é”Ÿæ–¤æ‹·
  *      Author: Asteria
  */
 
@@ -46,7 +46,7 @@ void assign2(struct people p){
 	p.name = "pendleton";
 }
 
-void call(void){
+void call2(void){
 	struct people n = {.name="juliana"};
 	struct people m = {.name="asteria"};
 	struct people * p1 = &m;

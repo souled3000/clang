@@ -14,7 +14,7 @@
 void p(char * s) {
 	printf("%s\n", s);
 }
-int main(void) {
+int main2(void) {
 
 //	p("xxxx");
 	//	test_strlen();
@@ -23,7 +23,7 @@ int main(void) {
 
 //	test_restrict();
 
-//	array2pointer();
+	array2pointer();
 
 //	c99_initialarray();
 

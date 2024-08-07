@@ -1,7 +1,7 @@
 /*
  * gets.c
  *
- *  Created on: 2016Äê12ÔÂ24ÈÕ
+ *  Created on: 2016å¹´12æœˆ24æ—¥
  *      Author: Asteria
  */
 

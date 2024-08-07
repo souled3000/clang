@@ -94,9 +94,9 @@ int main(void) {
 
 //	f_malloc();
 
-//	cfcfm();
+	cfcfm();
 //	unsigned char x [] = {char(0x01),char(0x03),char(0xef),char(0x06),char(0x0e)};
-
+//	main2();
 	return 2;
 }
 

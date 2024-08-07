@@ -1,7 +1,7 @@
 /*
  * pointer.c
  *
- *  Created on: 2016Äê12ÔÂ23ÈÕ
+ *  Created on: 2016å¹´12æœˆ23æ—¥
  *      Author: Asteria
  */
 
@@ -18,11 +18,11 @@ void test_p_a() {
 	const int k = 10;
 	int * kp = &k;
 	*kp = 100;
-	printf("b[0]:%d\n", b[0]); //¾¹È»°ÑconstµÄÖµ¸øÍ¨¹ıÖ¸Õë¸Ä±äÁË
-	printf("k:%d\n", k); //¾¹È»°ÑconstµÄÖµ¸øÍ¨¹ıÖ¸Õë¸Ä±äÁË
+	printf("b[0]:%d\n", b[0]); //ç«Ÿç„¶æŠŠconstçš„å€¼ç»™é€šè¿‡æŒ‡é’ˆæ”¹å˜äº†
+	printf("k:%d\n", k); //ç«Ÿç„¶æŠŠconstçš„å€¼ç»™é€šè¿‡æŒ‡é’ˆæ”¹å˜äº†
 }
 
-void test_restrict() {
+void test_restrict0() {
 	int * restrict a = (int*) calloc(2, sizeof(int));
 	a[0] += 10;
 	printf("%d\n", a[0]);
@@ -93,8 +93,8 @@ void call_traverse() {
 	traverse(a);
 }
 void traverse(int a[static 100]) {
-	//aÊÇÒ»¸öintÖ¸Õë£¬sizeof(int)=8, 8/4=2
-	//ËùÒÔ´«µİÊı×é£¬²»ÄÜÍ¨¹ıÕâÖÖ·½Ê½»ñÈ¡Êı×é´óĞ¡£¬Ö»ÄÜÔÙ´«Ò»¸öÊı×é´óĞ¡µÄ²ÎÊı
+	//aæ˜¯ä¸€ä¸ªintæŒ‡é’ˆï¼Œsizeof(int)=8, 8/4=2
+	//æ‰€ä»¥ä¼ é€’æ•°ç»„ï¼Œä¸èƒ½é€šè¿‡è¿™ç§æ–¹å¼è·å–æ•°ç»„å¤§å°ï¼Œåªèƒ½å†ä¼ ä¸€ä¸ªæ•°ç»„å¤§å°çš„å‚æ•°
 	printf("%p\n", a);
 	printf("%d\n", sizeof(a) / sizeof(4));
 	for (int i = 0; i < sizeof(a) / sizeof(int); i++) {
@@ -104,7 +104,7 @@ void traverse(int a[static 100]) {
 
 void pointer_trap() {
 	int * p;
-	*p = 3;	//Î´³õÊ¼»¯Ö¸Õë²»ÄÜÕâ¸ö×ö£»
+	*p = 3;	//æœªåˆå§‹åŒ–æŒ‡é’ˆä¸èƒ½è¿™ä¸ªåšï¼›
 	printf("%d\n", *p);
 }
 
@@ -119,7 +119,7 @@ void const_pointer() {
 }
 void pointer_multidimensional() {
 
-//	int a[¿ÉÒÔ¿Õ][±ØĞëÓĞÖµ]={{11,12},{21,22,23},{31,32,33}};
+//	int a[å¯ä»¥ç©º][å¿…é¡»æœ‰å€¼]={{11,12},{21,22,23},{31,32,33}};
 	int a[][3] = { { 11, 12, 13 }, { 21, 22, 23 }, { 31, 32, 33 } };
 	printf("%d\n", sizeof(a));
 //	int (* p) [3][3] = a;
@@ -135,7 +135,7 @@ void pointer_multidimensional() {
 	printf("%d\n", a[2][2]);
 	printf("%d\n", *(*(a + 2) + 2));
 
-	int (*pp)[3];	//´ú±íÒ»ĞĞ
+	int (*pp)[3];	//ä»£è¡¨ä¸€è¡Œ
 	pp = &a[0];
 	printf("%p\n", a);
 	printf("%p\n", pp);

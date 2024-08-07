@@ -5,7 +5,7 @@
  *      Author: juliana
  */
 #include <stdlib.h>
-void test_restrict() {
+void test_restrict1() {
 	int * restrict p = (int*) malloc(4 * sizeof(int));
 	int * a;
 	a = p;
@@ -14,7 +14,7 @@ void test_restrict() {
 	printf("%d", p[0]);
 }
 
-void test_restrict2() {
+void test_restrict5() {
 	int ar[10];
 	int * restrict restar = (int *) malloc(10 * sizeof(int));
 	int * par = ar;
